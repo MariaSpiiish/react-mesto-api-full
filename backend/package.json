@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MariaSpiiish/express-mesto-gha.git"
+    "url": "git+https://github.com/MariaSpiiish/react-mesto-api-full.git"
   },
   "keywords": [],
   "author": "Maria Lapshina",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MariaSpiiish/express-mesto-gha/issues"
+    "url": "https://github.com/MariaSpiiish/react-mesto-api-full/issues"
   },
-  "homepage": "https://github.com/MariaSpiiish/express-mesto-gha#readme",
+  "homepage": "https://github.com/MariaSpiiish/react-mesto-api-full#readme",
   "devDependencies": {
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
