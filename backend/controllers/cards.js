@@ -11,7 +11,6 @@ const deleteCard = (req, res, next) => Card.findById(req.params.cardId)
     throw new NotFound('Карточка не найдена');
   })
   .then((card) => {
-    console.log(req.user._id);
     if (card.owner.toString() !== req.user._id) {
       return next(new Forbidden('Нельзя удалить чужую карточку'));
     }
@@ -21,13 +20,13 @@ const deleteCard = (req, res, next) => Card.findById(req.params.cardId)
   .catch(next);
 
 const getCards = (req, res, next) => Card.find({})
-  .then((cards) => res.status(ok).send({ cards }))
+  .then((cards) => res.status(ok).send(cards))
   .catch(next);
 
 const createCard = (req, res, next) => {
   const { name, link } = req.body;
   Card.create({ name, link, owner: req.user._id })
-    .then((card) => res.status(created).send({ card }))
+    .then((card) => res.status(created).send(card))
     .catch((err) => {
       if (err.name === 'ValidationError') {
         return next(new BadRequest('Переданы некорректные данные при создании карточки'));
@@ -44,7 +43,7 @@ const likeCard = (req, res, next) => Card.findByIdAndUpdate(
   .orFail(() => {
     throw new NotFound();
   })
-  .then((card) => res.status(ok).send({ card }))
+  .then((card) => res.status(ok).send(card))
   .catch((err) => {
     if (err.name === 'CastError') {
       return next(new BadRequest('Переданы некорректные данные при постановке лайка'));
@@ -60,7 +59,7 @@ const dislikeCard = (req, res, next) => Card.findByIdAndUpdate(
   .orFail(() => {
     throw new NotFound();
   })
-  .then((card) => res.status(ok).send({ card }))
+  .then((card) => res.status(ok).send(card))
   .catch((err) => {
     if (err.name === 'CastError') {
       return next(new BadRequest('Переданы некорректные данные при снятии лайка'));

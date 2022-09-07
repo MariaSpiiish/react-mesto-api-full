@@ -1,7 +1,7 @@
 {
   "name": "express-mesto-gha",
   "version": "1.0.0",
-  "description": "[![Tests](https://github.com/MariaSpiiish/express-mesto-gha/actions/workflows/tests-13-sprint.yml/badge.svg)](https://github.com/MariaSpiiish/express-mesto-gha/actions/workflows/tests-13-sprint.yml) [![Tests](https://github.com/MariaSpiiish/express-mesto-gha/actions/workflows/tests-14-sprint.yml/badge.svg)](https://github.com/MariaSpiiish/express-mesto-gha/actions/workflows/tests-14-sprint.yml)\r # Проект Mesto фронтенд + бэкенд",
+  "description": "# Проект Mesto фронтенд + бэкенд",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,16 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MariaSpiiish/express-mesto-gha.git"
+    "url": "git+https://github.com/MariaSpiiish/react-mesto-api-full.git"
   },
   "keywords": [],
   "author": "Maria Lapshina",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MariaSpiiish/express-mesto-gha/issues"
+    "url": "https://github.com/MariaSpiiish/react-mesto-api-full/issues"
   },
-  "homepage": "https://github.com/MariaSpiiish/express-mesto-gha#readme",
+  "homepage": "https://github.com/MariaSpiiish/react-mesto-api-full#readme",
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/jsonwebtoken": "^8.5.9",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
@@ -29,6 +31,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "celebrate": "^15.0.1",
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "express-winston": "^4.2.0",
     "joi": "^17.6.0",
