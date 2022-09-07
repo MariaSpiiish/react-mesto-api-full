@@ -22,8 +22,8 @@ mongoose.connect('mongodb://localhost:27017/mestodb', {
 const options = {
   origin: [
     'http://localhost:3000',
-    // 'https://ВАШ ДОМЕЙН С ДОКУМЕНТА',
-    // 'https://YOUR.github.io',
+    'https://marialapshina.students.nomoredomains.sbs',
+    'http://marialapshina.students.nomoredomains.sbs',
   ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   preflightContinue: false,
@@ -36,7 +36,11 @@ app.use('*', cors(options));
 
 app.use(express.json());
 app.use(requestLogger);
-
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 app.use('/', authRouter);
 app.use(auth);
 app.use('/', usersRouter);
