@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
@@ -9,7 +10,7 @@ const authRouter = require('./routes/index');
 const { auth } = require('./middlewares/auth');
 const errorHandler = require('./middlewares/errorHandler');
 const NotFound = require('./custom errors/NotFound');
-// Слушаем 3000 порт
+
 const { PORT = 3010 } = process.env;
 
 const app = express();
