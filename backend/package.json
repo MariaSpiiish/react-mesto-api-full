@@ -21,8 +21,6 @@
   },
   "homepage": "https://github.com/MariaSpiiish/react-mesto-api-full#readme",
   "devDependencies": {
-    "@types/bcryptjs": "^2.4.2",
-    "@types/jsonwebtoken": "^8.5.9",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
