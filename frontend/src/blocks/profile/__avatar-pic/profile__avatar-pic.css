@@ -1,0 +1,12 @@
+.profile__avatar-pic {
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media (max-width: 900px) {
+    .profile__avatar {
+        margin-bottom: 26px;
+    }
+}

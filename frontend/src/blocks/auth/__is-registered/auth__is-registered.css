@@ -1,0 +1,11 @@
+.auth__is-registered {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    color: #FFF;
+    max-width: 358px;
+    max-height: 17px;
+    margin: 15px auto 0;
+    padding: 0;
+}

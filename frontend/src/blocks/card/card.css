@@ -1,0 +1,7 @@
+.card {
+    margin: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    min-height: 361px;
+    position: relative;
+}

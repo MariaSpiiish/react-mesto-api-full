@@ -1,0 +1,18 @@
+.popup__trash-container {
+    background-color: #fff;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    border-radius: 10px;
+    max-width: 430px;
+    height: 181px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+@media (max-width: 320px) {
+    .popup__container {
+        max-width: 282px;
+    }
+}
